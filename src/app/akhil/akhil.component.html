@@ -1,0 +1,191 @@
+<body>
+  <div class="bgimg-3">
+    <div class="caption">
+      <h3 style="text-align:center;">Akhil Yerra</h3>
+    </div>
+  </div>
+
+  <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <h3 style="text-align:center;">Who Am I?</h3>
+    <p>Other than being a computer science/finance major(the boring resume stuff), I am a funny, hip-hop loving, sports
+      loving, caring, sometimes nerdy, sometimes goofy individual that was born and raised in New Jersey. If you explore this website you can see some cool
+      data that I have collected about myself.
+      <br>
+    </p>
+    <h3 style="text-align:center;">Whats my Goal?</h3>
+    <p>
+      My goal in life is to be able to help all those who may not have the luxuries I have whether I end up as
+      a billionaire or just live a modest life.
+      Growing up I had the luxury of being exposed to a lot of diverse individuals and it made me realize that I was very 
+      fortunate to have what I had.
+      Some people had it much worse than me. Some families lived pay check to pay check.
+      It made me realize the importance of appreciating what I have in life and doing my job to try and help people that I
+      share this world with. </p>
+  </div>
+
+  <div class="bgimg-2">
+    <div class="caption">
+      <span style="background-color:transparent;font-size:25px;color: #f7f7f7;">I am : <br> {{ageCalc}}</span>
+    </div>
+  </div>
+
+  <div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;padding:50px 80px;">
+      <p>Jermaine Cole reached A+ celebrity status when he dropped the song "No Role Models", which took the world by
+        storm.
+        He talks about how growing up he had no one to look up to.
+        Luckily for me there are some people who have had an influence on who I am today.</p>
+    </div>
+  </div>
+
+  <div style="position:relative;">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <div style="color:#282E34;background-color:#ddd;padding:50px 80px;">
+      <h3>Hover over the images, which use Tooltips to display information.</h3>
+      <div class="image-container col-sm-12 col-md-12 col-lg-12">
+        <img class="rolethumbs" src="src/assets/images/IMG_2364.JPG" placement="top" tooltip="My Family and Friends have been there since day 1 and have instilled the morals of helping others, being kind and working hard. " />
+        <img class="rolethumbs" src="https://www.essence.com/wp-content/uploads/2014/07/images/2014/07/02/10472075_1523181704568887_65313114_n.jpg"
+          placement="top" tooltip="Chris Rock and Kevin Hart, two of my favorite comedians, provide comedic relief to millions of people. I hope to provide the same type of escape from reality with my humor and make people laugh and enjoy themselves. " />
+        <img class="rolethumbs" src="https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F74622f434a6e852420ea522d6aae36f1.1000x1000x1.jpg"
+          placement="top" tooltip="Meek Mill works hard and continues to even though he has become rich and successful. His music early on has influenced me to be motivated and continue perfecting my craft." />
+        <img class="rolethumbs" src="http://www.bleedingcool.com/wp-content/uploads/2016/03/rdjstark.jpg?x70969"
+          placement="top" tooltip="Robert Downey Jr, aka Tony Stark, has been able to personally overcome many obstacles along his way. In addition, Tony Stark, the fictional character, is everything I aspire to be: Smart, Always trying new things, a philanthropist, and a billionaire doesn't hurt." />
+        <img class="rolethumbs" src="https://pbs.twimg.com/profile_images/988775660163252226/XpgonN0X.jpg" placement="right"
+          tooltip="Bill Gates and Melinda Gates are an inspiration to most. They have pledged to donate more than 90 billion dollars of their fortunte to help those who are less fortunate. As Andrew Carnegie once said 'No man becomes rich unless he enriches others.' They along with my family is the reason I wish to help people that need it." />
+        <img class="rolethumbs" src="http://a.espncdn.com/photo/2008/0505/pg2_a_garnett_300.jpg" placement="top"
+          tooltip="As a Boston Sports fan, Kevin Garnett(KG) was one of my favorite players. His raw emotion and passion for the game was unmatchable. He is the reason I give it a 110% in anything that I do from accidentally overcooking my eggs to making this website about me." />
+      </div>
+      <button type="button" class="btn btn-info" (click)="openModal(template)">Click Here For the Car Fax</button>
+
+      <ng-template #template>
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">Akhil Yerra's Summary Report</h4>
+          <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h5>Helping Others:</h5>
+          <p>Family/Friends, Chris Rock/Kevin Hart, Tony Stark, Bill Gates</p>
+          <h5>Working Hard:</h5>
+          <p>Meek Mill, Kevin Garnett, Family/Friends, Robert Downey Jr, Kevin Garnett</p>
+          <h5>Passion:</h5>
+          <p>Kevin Garnett, Meek Mill</p>
+          <h5>Geeky:</h5>
+          <p>Tony Stark, Bill Gates</p>
+          <h5>Humor:</h5>
+          <p>Kevin Hart & Chris Rock , Robert Downey Jr, Definitely not Family or Friends</p>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+
+  <div class="bgimg-4">
+    <div class="caption">
+      <span ></span>
+    </div>
+  </div>
+
+  <div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;padding:50px 80px;">
+      <p>
+        Using Twitter's API, I was able to fetch whats trending right now in the world.
+      </p>
+      <button type="button" class="btn btn-info" (click)="whatsTrending()">See whats trending Right Now</button>
+      <div *ngIf="trendClicked">
+        <h1>{{Trends[0]}}</h1>
+        <h2>{{Trends[1]}}</h2>
+        <h3>{{Trends[2]}}</h3>
+        <h4>{{Trends[3]}}</h4>
+        <h5>{{Trends[4]}}</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="bgimg-5">
+    <div class="caption">
+      <span ></span>
+    </div>
+  </div>
+  <div style="color:#282E34;background-color:#ddd;padding:50px 80px;">
+  <h5>Using my personal iTunes listening history I was able to create and fetch a json object and parse through it to find top
+    artists, songs and albums since 2015 of September.</h5>
+  <p> The raw data included song title, number of plays, artist and album it was featured on. Using that I was able to
+    transform the data to match the requested query. </p>
+
+  <!-- <p>You selected: {{selected}}</p> -->
+</div>
+  <h1>
+    {{title}}
+  </h1>
+  <h4>If you click on each bar a different popup will be created using Spotify's API with an embedded media player and information about the respective album, song or artist. </h4>
+  <mat-form-field>
+      <mat-select [(value)]="selected" (selectionChange)="transformIssue()">
+        <mat-option value="Album">Album</mat-option>
+        <mat-option value="Artist">Artist</mat-option>
+        <mat-option value="Song">Song</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+  <div >
+    <canvas *ngIf=hasLoaded baseChart [chartType]="'bar'" [datasets]="chartData" [labels]="labels" [options]="chartOptions"
+      [legend]="true" [colors]="colors" (chartClick)="onChartClick(artistInfo,$event, selected)">
+    </canvas>
+  </div>
+  <ng-template #artistInfo>
+    <div class="modal-header">
+      <h2 class="modal-title">{{spotifyModalTitle}}</h2>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <img src={{imageIcon}} alt="Smiley face" width="100%" allow="encrypted-media">
+      <br><br><br>
+      <div *ngIf="selected=='Artist'">
+        <h4>Genres : </h4>
+        <p>{{spotifyArtist.artists.items[0].genres}}</p><br>
+      </div>
+      <div *ngIf="selected=='Album'">
+        <h4>Artists Included : </h4>
+        <h5 *ngFor="let artistName of spotifyAlbum.albums.items[0].artists">{{artistName.name}}</h5><br>
+      </div>
+      <div *ngIf="selected=='Album'">
+          <h4>Date Released: </h4>
+          <h5 *ngFor="let artistName of spotifyAlbum.albums.items[0].artists">{{spotifyAlbum.albums.items[0].release_date}}</h5><br>
+        </div>  
+      <div *ngIf="selected=='Song'">
+        <h4>Artists Included : </h4>
+        <h5 *ngFor="let artistName of spotifyTrack.tracks.items[0].artists">{{artistName.name}}</h5><br>
+      </div>
+    </div>
+    <div class='embed-container'>
+      <iframe [src]=url *ngIf=spotifyLoaded frameborder='0' allowtransparency='true' width="100%"></iframe>
+    </div>
+
+  </ng-template>
+
+  <div class="bgimg-6">
+    <div class="caption">
+      <span ></span>
+    </div>
+  </div>
+
+  <div style="color:#ddd;background-color:#282E34;padding:50px 80px;">
+    <br><br>
+    <h6>Hopefully this website has helped you to get a better understanding of who I am and the things that I enjoy from music to sports to cool tech stuff. 
+      <br>
+      You may be wondering whats with the random pictures, but each one is a place that I have enjoyed being at: </h6>
+      <br> <h4>Yosemite, Los Angeles, New York, Florida and my High School(North Brunswick, NJ). </h4>
+      <br>
+      <h6>
+      I created this website using Angular, Spotify's API, Twitter's API and hosted it on Microsoft Azure. 
+      <br> 
+      This is the end of the journey and I appreciate you coming along. Hope you liked what you saw!!
+      If you want to see my website's source code visit or click: 
+      <br>
+      <a href="https://www.w3schools.com">Visit W3Schools</a>    
+    </h6>
+  </div>
+
+</body>
