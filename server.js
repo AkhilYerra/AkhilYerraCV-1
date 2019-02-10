@@ -3,15 +3,15 @@ const Twitter = require('twit');
 const Spotify = require('node-spotify-api')
 const app = express();
 const client = new Twitter({
-  consumer_key: 'cqpW07aEmhbpeGAI0Jf6eT4hC',
-  consumer_secret: 'luPksK1GDz3KX2GDcAUGJ8oVzZUjT5otlqX2SlE9yFYLaooH1v',
-  access_token: '491873327-DcdcK23zGnW0NNiaJw6DWczSnTa48iCz3soOoYUK',
-  access_token_secret: 'B0b2PnzOhwlRUJ1efvnZHftFBs6y24c8ihaDbiKqBdFsM'
+  consumer_key: '123123123123',
+  consumer_secret: '123123123123',
+  access_token: '123123123123',
+  access_token_secret: '123123123123'
 });
 
 var spotify = new Spotify({
-  id: '977951575bfb4d16a577669f4ca18488',
-  secret: '2ccfabf3aa804373aa6db9f2e962e9ca'
+  id: '123123123123',
+  secret: '123123123123'
 });
 
 app.use(require('cors')());
