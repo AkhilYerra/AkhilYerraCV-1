@@ -15,8 +15,6 @@ var spotify = new Spotify({
   id: '977951575bfb4d16a577669f4ca18488',
   secret: '2ccfabf3aa804373aa6db9f2e962e9ca'
 });
-var distDir = __dirname + "/dist/";
-app.use(express.static(distDir));
 
 app.use(require('cors')());
 app.use(require('body-parser').json());
@@ -118,3 +116,7 @@ app.get('/api/trends/place', (req, res) => {
 
 
 app.listen(3000, () => console.log('Server running'));
+
+
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
