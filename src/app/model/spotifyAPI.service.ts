@@ -29,6 +29,7 @@ export class SpotifyService {
 
   searchSongByName(id: string){
     console.log(`${environment.api}/searchSong${id}`)
+    console.log(process.env.PORT);
      return this.http.get<searchTrack>(`${environment.api}/searchSong${id}`)
   }
 
