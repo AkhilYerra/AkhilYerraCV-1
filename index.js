@@ -115,7 +115,7 @@ app.get('/api/trends/place', (req, res) => {
 });
 
 
-app.listen(3000, () => console.log('Server running'));
+app.listen(process.env.PORT || 4200, () => console.log('Server running'));
 
 
 var distDir = __dirname + "/dist/";
