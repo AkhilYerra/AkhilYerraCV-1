@@ -34,6 +34,6 @@ export class SpotifyService {
 
   searchAlbumByName(id: string){
     console.log(`${environment.api}/searchAlbum${id}`)
-     return this.http.get<searchAlbum>(`${environment.api}/searchAlbum${id}`)
+     return this.http.get<searchAlbum>(`/api/searchAlbum${id}`)
   }
 }

@@ -14,7 +14,7 @@ export class TwitterService {
   constructor(private http: HttpClient) { }
 
   trends(){
-    return this.http.get<TwitterResponse>(`${environment.api}/trends/place`)
+    return this.http.get<TwitterResponse>(`/api/trends/place`)
   }
 
 }
