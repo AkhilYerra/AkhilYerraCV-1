@@ -18,6 +18,7 @@ var spotify = new Spotify({
 
 app.use(require('cors')());
 app.use(require('body-parser').json());
+console.log(process.env.PORT);
 
 app.get('/api/artists:id', (req, res) => {
   console.log("SENT");
